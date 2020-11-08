@@ -1,8 +1,8 @@
-# **DerpyDB**
+# **ArnonDB**
 # Basic code
 
 ```js
-const Database = require('derpydb');
+const Database = require('arnondb');
 const db = new Database('db.sqlite');
 ```
 
@@ -35,10 +35,10 @@ Get the data from given id
 
 ```js
 // without target
-const data = db.get('derpy', { table: 'players' }); // { id: 'derpy', age: 18 }
+const data = db.get('arnon', { table: 'players' }); // { id: 'arnon', age: 14 }
 // with target
-const data = db.get('derpy', { table: 'players', target: 'age' }); // 18
-const data = db.get('derpy.age', { table: 'players' }); // 18
+const data = db.get('arnon', { table: 'players', target: 'age' }); // 14
+const data = db.get('arnon.age', { table: 'players' }); // 14
 ```
 
 ### .set(*id*, *value*, [*options*])
@@ -49,7 +49,7 @@ set new data to given id
 - `options.target`: specific a target to be set (default: `null`).
 
 ```js
-db.set('derpy.age', 18, { table: 'players' }); // 18
+db.set('arnon.age', 14, { table: 'players' }); // 14
 ```
 
 ### .has(*id*, [*options*])
@@ -60,7 +60,7 @@ find if the given id is exits
 - `options.target`: specific a target to find (default: `null`).
 
 ```js
-db.has('derpy.age', { table: 'players' }); // true
+db.has('arnon.age', { table: 'players' }); // true
 ```
 
 ### .type(*id*, [*options*])
@@ -71,7 +71,7 @@ find the type of the given id
 - `options.target`: specific a target to find type (default: `null`).
 
 ```js
-db.type('derpy.age', { table: 'players' }); // number
+db.type('arnon.age', { table: 'players' }); // number
 ```
 
 ### .startsWith(*string*, [*options*])
@@ -81,7 +81,7 @@ find the list datas that starts with the given string
 - `options.table`: specific table in the database (default: `null`).
 
 ```js
-db.startsWith('der', { table: 'players' }); // [{ id: 'derpy', age: 18}]
+db.startsWith('der', { table: 'players' }); // [{ id: 'arnon', age: 14}]
 ```
 
 ### .add(*id*, *number*, [*options*])
@@ -92,7 +92,7 @@ add number value to the given id
 - `options.target`: specific a target to be added the number (default: `null`).
 
 ```js
-db.add('derpy.age', 1, { table: 'players' }); // 19
+db.add('arnon.age', 1, { table: 'players' }); // 15
 ```
 
 ### .remove(*id*, *number*, [*options*])
@@ -103,7 +103,7 @@ remove number value from the given id
 - `options.target`: specific a target to be removed the number (default: `null`).
 
 ```js
-db.remove('derpy.age', 1, { table: 'players' }); // 17
+db.remove('arnon.age', 1, { table: 'players' }); // 13
 ```
 
 ### .push(*id*, *value*, [*options*])
@@ -114,7 +114,7 @@ push new item value to the given id
 - `options.target`: specific a target to be pushed in to (default: `null`).
 
 ```js
-db.push('derpy.list', 'apple', { table: 'players' }); // ['banana', 'grape', 'apple']
+db.push('arnon.list', 'apple', { table: 'players' }); // ['banana', 'grape', 'apple']
 ```
 
 ### .pull(*id*, *value*, [*options*])
@@ -125,7 +125,7 @@ pull item value from the given id
 - `options.target`: specific a target to be pulled from it (default: `null`).
 
 ```js
-db.pull('derpy.list', 'grape', { table: 'players' }); // ['banana', 'apple']
+db.pull('arnon.list', 'grape', { table: 'players' }); // ['banana', 'apple']
 ```
 
 ### .delete(*id*, [*options*])
@@ -136,7 +136,7 @@ delete value from the given id
 - `options.target`: specific a target to be deleted from it (default: `null`).
 
 ```js
-db.delete('derpy', { table: 'players' }); // true
+db.delete('arnon', { table: 'players' }); // true
 ```
 
 ### .all([*options*])
@@ -146,7 +146,7 @@ get list of databases in specific table
 - `options.table`: specific table in the database (default: `null`).
 
 ```js
-db.all({ table: 'players' }); // [{ id: 'derpy', age: 18}]
+db.all({ table: 'players' }); // [{ id: 'arnon', age: 14}]
 ```
 
 ### .deleteAll([*options*])
@@ -213,5 +213,5 @@ db.top('coins', 10, { table: 'players' });
 run code through sqlite
 
 ```js
-db.db.prepare('SELECT * FROM players WHERE id = (?)').get('derpy') 
+db.db.prepare('SELECT * FROM players WHERE id = (?)').get('arnon') 
 ```
