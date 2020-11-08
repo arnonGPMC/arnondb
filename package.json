@@ -1,15 +1,15 @@
 {
-  "name": "derpydb",
-  "version": "0.1.10",
-  "description": "DerpyDB are useful database for create database with some collums, some tables and more amazing function for easier for your work, if you want contact me come to Discord: Derpy#6666",
+  "name": "arnondb",
+  "version": "1.0",
+  "description": "arnonDB are useful database for create database with some collums, some tables and more amazing function for easier for your work, if you want contact me come to Discord: MegaNoamSuper#7584",
   "main": "index.js",
-  "keywords": ["better-sqlite3", "database", "db", "derpy"],
-  "author": "Derpy666",
+  "keywords": ["better-sqlite3", "database", "db", "arnon", "arnon001", "MegaNoamsSuper"],
+  "author": "Arnon001",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Derpy666/derpydb.git"
+    "url": "git+https://github.com/arnonGPMC/arnondb.git"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "better-sqlite3": "^7.1.1",
     "lodash.get": "^4.4.2",
